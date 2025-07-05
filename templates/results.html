@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Результаты проверки</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 1000px; margin: 0 auto; padding: 20px; }
+        .stats { background: #f0f8ff; padding: 15px; margin-bottom: 20px; border-radius: 5px; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+        .success { color: #2ecc71; }
+        .error { color: #e74c3c; }
+    </style>
+</head>
+<body>
+    <h1>Результаты проверки</h1>
+
+    <div class="stats">
+        Проверено сайтов: <strong>{{ total }}</strong> |
+        Успешно: <strong class="success">{{ success }}</strong> |
+        С ошибками: <strong class="error">{{ total - success }}</strong>
+    </div>
+
+
+    {{ table|safe }}
+
+    <p style="margin-top: 30px;">
+        <a href="/">Проверить другие сайты</a>
+    </p>
+</body>
+</html>

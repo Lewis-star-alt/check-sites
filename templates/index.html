@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Мониторинг сайтов</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        textarea { width: 100%; height: 200px; padding: 10px; }
+        button { padding: 10px 20px; margin-top: 10px; background: #4CAF50; color: white; border: none; cursor: pointer; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h1>Проверка доступности сайтов</h1>
+    <form method="post" action="/check">
+        <label for="urls">Введите URL сайтов (по одному на строку):</label><br>
+        <textarea name="urls" placeholder="https://google.com
+https://github.com
+https://nonexistent.example.com" required></textarea><br>
+        <button type="submit">Проверить</button>
+    </form>
+</body>
+</html>
